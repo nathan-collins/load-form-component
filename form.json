@@ -1,0 +1,47 @@
+{
+  "enterprise": {
+    "form-purpose": [
+      {
+        "name": "Term Deposit",
+        "groups": ["naming", "birth"],
+        "locales": ["en-BG"],
+        "fields": [
+          {
+            "name": "name",
+            "prefix": "lion",
+            "component": "input",
+            "required": true,
+            "group": "naming",
+            "icon": true,
+            "ajax": {}
+          },
+          {
+            "name": "email",
+            "prefix": "lion",
+            "component": "input-email",
+            "required": true,
+            "group": "naming"
+          },
+          {
+            "name": "date",
+            "prefix": "lion",
+            "component": "input-datepicker",
+            "required": true,
+            "group": "birth"
+          },
+          {
+            "name": "countries",
+            "prefix": "lion",
+            "component": "select",
+            "options": [{}],
+            "required": true,
+            "group": "birth"
+          }
+        ],
+        "submit": "submitIt",
+        "ajax": true
+      }
+    ]
+  },
+  "finance": {}
+}
