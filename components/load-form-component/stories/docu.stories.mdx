@@ -1,0 +1,44 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+
+import '../load-form-component.js';
+
+<Meta title="Card|Docs" />
+
+# LoadFormComponent
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add load-form-component
+```
+
+```js
+import 'load-form-component/load-form-component.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple" height="220px">
+    {html`
+      <load-form-component></load-form-component>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="load-form-component" />
+
+## Playground
+
+Please select "Card Playground" story and open the knobs panel.
