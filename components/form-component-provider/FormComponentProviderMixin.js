@@ -1,13 +1,27 @@
 import CachedTask from '../cached-task/CachedTask.js';
 
-const FormComponentProvider = (Base) => class extends Base {
-  _instance = new Map();
-  
+const FormComponentProvider = (superclass) => class extends superclass {
   constructor() {
     super();
   }
 
-  providerFormComponent(key, instance) {
-    
+  static get properties() {
+    return {
+      team: {
+        type: String,
+      }
+    }
+  }
+
+  render() {
+    return html`
+      <${this.component()}></${this.component()}>
+    `;
+  }
+
+  component() {
+    return html`
+      
+    `;
   }
 }

@@ -3,8 +3,22 @@
     "form-purpose": [
       {
         "name": "Term Deposit",
-        "groups": ["naming", "birth"],
+        "groups": ["naming", "birth", "region"],
         "locales": ["en-BG"],
+        "steps": [
+          {
+            "step": 1,
+            "submit": false
+          },
+          {
+            "step": 2,
+            "submit": false
+          },
+          {
+            "step": 3,
+            "submit": true
+          }
+        ],
         "fields": [
           {
             "name": "name",
@@ -13,21 +27,24 @@
             "required": true,
             "group": "naming",
             "icon": true,
-            "ajax": {}
+            "ajax": {},
+            "step": 1
           },
           {
             "name": "email",
             "prefix": "lion",
             "component": "input-email",
             "required": true,
-            "group": "naming"
+            "group": "naming",
+            "step": 1
           },
           {
             "name": "date",
             "prefix": "lion",
             "component": "input-datepicker",
             "required": true,
-            "group": "birth"
+            "group": "birth",
+            "step": 1
           },
           {
             "name": "countries",
@@ -35,7 +52,16 @@
             "component": "select",
             "options": [{}],
             "required": true,
-            "group": "birth"
+            "group": "region",
+            "step": 1
+          },
+          {
+            "name": "bank account",
+            "prefix": "lion",
+            "component": "input-ibn",
+            "required": true,
+            "group": "region",
+            "step": 2
           }
         ],
         "submit": "submitIt",
